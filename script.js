@@ -4,7 +4,7 @@ class Rectangle {
     this._height = height;
   }
 
-  // Getter methods for width and height
+  // Getter methods
   get width() {
     return this._width;
   }
@@ -21,8 +21,7 @@ class Rectangle {
 
 class Square extends Rectangle {
   constructor(side) {
-    // Calling parent class constructor
-    super(side, side);
+    super(side, side); // Call the parent constructor
   }
 
   // Method to calculate perimeter
@@ -31,7 +30,7 @@ class Square extends Rectangle {
   }
 }
 
-// Example usage:
+// Example usage
 const rectangle = new Rectangle(5, 10);
 console.log(`Rectangle Area: ${rectangle.getArea()}`); // Output: 50
 
