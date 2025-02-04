@@ -1,10 +1,10 @@
-//complete this code
 class Rectangle {
-	constructor(width, height) {
+  constructor(width, height) {
     this._width = width;
     this._height = height;
   }
 
+  // Getter methods for width and height
   get width() {
     return this._width;
   }
@@ -12,22 +12,29 @@ class Rectangle {
   get height() {
     return this._height;
   }
-	getArea(){
-		return this.width * this.height;
-	}
+
+  // Method to calculate area
+  getArea() {
+    return this._width * this._height;
+  }
 }
 
 class Square extends Rectangle {
-	constructor(side){
-		super(side, side);
-	}
-	getPerimeter(){
-		return 4 * this.width;
-	}
+  constructor(side) {
+    // Calling parent class constructor
+    super(side, side);
+  }
+
+  // Method to calculate perimeter
+  getPerimeter() {
+    return 4 * this.width;
+  }
 }
 
-let myRectangle = new Rectangle(10, 20);
-console.log(myRectangle.getArea());
-let mySquare = new Square(5);
-console.log(mySquare.getArea());
-console.log(mySquare.getPerimeter());
+// Example usage:
+const rectangle = new Rectangle(5, 10);
+console.log(`Rectangle Area: ${rectangle.getArea()}`); // Output: 50
+
+const square = new Square(4);
+console.log(`Square Area: ${square.getArea()}`); // Output: 16
+console.log(`Square Perimeter: ${square.getPerimeter()}`); // Output: 16
