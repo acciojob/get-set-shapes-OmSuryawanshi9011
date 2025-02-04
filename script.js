@@ -27,3 +27,7 @@ class Square extends Rectangle {
 }
 
 let myRectangle = new Rectangle(10, 20);
+console.log(myRectangle.getArea());
+let mySquare = new Square(5);
+console.log(mySquare.getArea());
+console.log(mySquare.getPerimeter());
